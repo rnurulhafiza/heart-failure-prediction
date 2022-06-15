@@ -30,5 +30,5 @@ st.write(df)
 heart = pd.read_csv('https://raw.githubusercontent.com/rnurulhafiza/heart-failure-prediction/main/heart.csv')
               
 st.write("""
-This app is still under development.
+**NOTICE:** This app is still under development.
 """)
