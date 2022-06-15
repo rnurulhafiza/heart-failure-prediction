@@ -29,10 +29,10 @@ st.write(df)
 
 heart = pd.read_csv('https://raw.githubusercontent.com/rnurulhafiza/heart-failure-prediction/main/heart.csv')
                
-X = iris.drop('heartdisease', axis = 1)
+X = heart.drop('heartdisease', axis = 1)
 X.head()
 
-y = iris['heartdisease']
+y = heart['heartdisease']
 y.head()
 
 clf = RandomForestClassifier()
