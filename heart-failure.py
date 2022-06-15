@@ -28,26 +28,4 @@ st.subheader('User Input parameters')
 st.write(df)
 
 heart = pd.read_csv('https://raw.githubusercontent.com/rnurulhafiza/heart-failure-prediction/main/heart.csv')
-               
-X = heart.drop(['sex', 'chest pain type', 'fasting blood sugar', 'resting ECG', 'exercise angina', 'oldpeak', 'ST slope', 'heartDisease', axis = 1])
-X.head()
-
-y = heart['heartDisease']
-y.head()
-
-clf = RandomForestClassifier()
-clf.fit(X, y)
-
-prediction = clf.predict(df)
-prediction_proba = clf.predict_proba(df)
-
-st.subheader('Class labels and their corresponding index number')
-st.table(['heartdisease', 'normal'])
-
-
-st.subheader('Prediction')
-#st.write(iris.target_names[prediction])
-st.write(prediction)
-
-st.subheader('Prediction Probability')
-st.write(prediction_proba)
+              
