@@ -29,7 +29,7 @@ st.write(df)
 
 heart = pd.read_csv('https://raw.githubusercontent.com/rnurulhafiza/heart-failure-prediction/main/heart.csv')
                
-X = heart.drop('heartDisease', axis = 1)
+X = heart.drop(['sex', 'chest pain type', 'fasting blood sugar', 'resting ECG', 'exercise angina', 'oldpeak', 'ST slope', 'heartDisease', axis = 1])
 X.head()
 
 y = heart['heartDisease']
