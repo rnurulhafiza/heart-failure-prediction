@@ -14,11 +14,11 @@ def user_input_features():
     age = st.sidebar.slider('Age', 28, 50, 77)
     resting_blood_pressure = st.sidebar.slider('Resting blood pressure', 0, 100, 200)
     cholesterol = st.sidebar.slider('Cholesterol', 0, 300, 603)
-    fasting_blood_sugar = st.sidebar.slider('Fasting blood sugar', 0, 0.5, 1)
+    maximum_heart_rate_achieved = st.sidebar.slider('Maximum heart rate achieved', 60, 131, 202)
     data = {'age': age,
             'resting_blood_pressure': resting_blood_pressure,
             'cholesterol': cholesterol,
-            'fasting_blood_sugar': fasting_blood_sugar}
+            'maximum_heart_rate_achieved': maximum_heart_rate_achieved}
     features = pd.DataFrame(data, index=[0])
     return features
 
