@@ -29,4 +29,25 @@ st.write(df)
 
 heart = pd.read_csv('https://raw.githubusercontent.com/rnurulhafiza/heart-failure-prediction/main/heart.csv')
                
+X = iris.drop('heartdisease', axis = 1)
+X.head()
 
+y = iris['heartdisease']
+y.head()
+
+clf = RandomForestClassifier()
+clf.fit(X, y)
+
+prediction = clf.predict(df)
+prediction_proba = clf.predict_proba(df)
+
+st.subheader('Class labels and their corresponding index number')
+st.table(['heartdisease', 'normal'])
+
+
+st.subheader('Prediction')
+#st.write(iris.target_names[prediction])
+st.write(prediction)
+
+st.subheader('Prediction Probability')
+st.write(prediction_proba)
