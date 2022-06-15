@@ -27,6 +27,6 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-heart failure = pd.read_csv('https://raw.githubusercontent.com/rnurulhafiza/Final-Project/main/IRIS.csv')
+heart failure = pd.read_csv('https://raw.githubusercontent.com/rnurulhafiza/heart-failure-prediction/main/heart.csv')
                
 
